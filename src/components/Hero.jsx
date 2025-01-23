@@ -29,7 +29,7 @@ const Hero = () => {
                         />
                     </span>
                     <p className="my-2 text-1xl py-3 
-                    font-extralight tracking-tighter">{HERO_CONTENT}</p>
+                    font-extralight tracking-tighter whitespace-pre-wrap">{HERO_CONTENT}</p>
                 </div>
             </div>
             <div className="w-full lg:w-1/2 lg:p-8">
