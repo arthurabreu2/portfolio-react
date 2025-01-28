@@ -1,7 +1,3 @@
-// import project1 from "../assets/projects/project-1.jpg";
-// import project2 from "../assets/projects/project-2.jpg";
-// import project3 from "../assets/projects/project-3.jpg";
-// import project4 from "../assets/projects/project-4.jpg";
 import { FaMobileAlt, FaCogs, FaGlobeAmericas, FaHandsHelping } from "react-icons/fa";
 import { AiOutlineLineChart } from "react-icons/ai";
 import { TbTools } from "react-icons/tb";
@@ -80,43 +76,5 @@ export const SERVICES = [
 ];
 
 export const EXPERIENCES = [
-    {
-        date: "Nov 2012",
-        title: "Desenvolvedor Full Stack / Analista de Sistemas",
-        description: `Atuando na criação e manutenção do ERP interno da empresa Masternet Telecom, 
-  fazendo levantamento de requisitos, documentação com diagrama de fluxo, 
-  desenvolvimento de módulos para gerenciamento de clientes, emissão de 
-  notas fiscais, integração com instituições financeiras, comunicação 
-  com equipamentos de telecomunicações, abertura de chamados, estoque e 
-  portal do cliente.`,
-        tags: [
-            "#PHP", "#Bootstrap", "#Git", "#Javascript", "#API_RestFull",
-            "#Postman", "#BPMN", "#Python", "#Jquery"
-        ]
-    },
-    {
-        date: "Abr 2014",
-        title: "DBA / Desenvolvedor Back-End",
-        description: `Com aumento da demanda e processamento, atuei na modelagem 
-  e manutenção do Banco de Dados, criação de SQL's para consultas 
-  compostas, criação de serviço de comunicação via Web Sockets 
-  para gerenciamento de ligações com central telefônica, e, desenvolvimento 
-  de componentes com threads e filas para processamento distribuído.`,
-        tags: [
-            "#MySQL", "#PostgreSQL", "#SQL", "#Redis", "#Memcached",
-            "#Web_Socket", "#Mailhog", "#RabbitMQ", "#Proxy_Reverso", "#Load_Balance"
-        ]
-    },
-    {
-        date: "Jan 2020",
-        title: "DevOps / SysAdmin",
-        description: `Instalação, gerenciamento e manutenção de servidores UNIX 
-  para aplicações web, APIs e serviços internos de comunicação. Implementado 
-  integração contínua para deploy automático e automatizado, infraestrutura 
-  com CI/CD, dividindo ambientes de trabalho para homologação e produção.`,
-        tags: [
-            "#Docker", "#Docker_Compose", "#CI_CD", "#Gitlab_Runner", "#Shell_Script",
-            "#Ansible", "#Vagrant", "#Linux", "#Nginx"
-        ]
-    }
+
 ]
