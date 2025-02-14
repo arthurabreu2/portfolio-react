@@ -4,6 +4,9 @@ import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { motion } from "framer-motion";
+import { IoLanguage } from "react-icons/io5";
+import { HiMiniLanguage } from "react-icons/hi2";
+
 
 const Navbar = () => {
     return (
@@ -60,7 +63,7 @@ const Navbar = () => {
                         visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
                     }}
                 >
-                    <FaInstagram className="shado-lg transition-all duration-500 hover:scale-125" />
+                    <FaInstagram className="shadow-lg transition-all duration-500 hover:scale-125" />
                 </motion.div>
                 <motion.div
                     variants={{
@@ -69,6 +72,14 @@ const Navbar = () => {
                     }}
                 >
                     <FaSquareXTwitter className="shadow-lg transition-all duration-500 hover:scale-125" />
+                </motion.div>
+                <motion.div
+                    variants={{
+                        hidden: { opacity: 0, x: 45 },
+                        visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
+                    }}
+                >
+                    <HiMiniLanguage className="shadow-lg transition-all duration-500 hover:scale-125 ml-16" />
                 </motion.div>
             </motion.div>
         </motion.nav>

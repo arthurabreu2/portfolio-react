@@ -33,7 +33,7 @@ const Hero = () => {
                         <motion.span className="bg-gradient-to-r from-pink-300 via-slate-600 to-purple-700 bg-clip-text text-lg tracking-tight text-transparent" variants={{ hidden: { opacity: 0, x: -100 }, visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeInOut" } } }}>
                             <ReactTyped strings={["and Curious", "and Scientist", "and DevOps", "and Passionate about Challenges", "and Determined"]} typeSpeed={100} backSpeed={100} loop />
                         </motion.span>
-                        <motion.p className="my-2 text-1xl py-3 font-extralight tracking-tighter whitespace-pre-wrap" variants={{ hidden: { opacity: 0, x: -100 }, visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeInOut" } } }}>{HERO_CONTENT}</motion.p>
+                        <motion.p className="my-2 text-1xl py-3 font-extralight tracking-tighter whitespace-pre-wrap text-left lg:text-left sm:text-center" variants={{ hidden: { opacity: 0, x: -100 }, visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeInOut" } } }}>{HERO_CONTENT}</motion.p>
                     </motion.div>
                 </div>
                 <motion.div className="w-full lg:w-1/2 lg:p-8" initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.2 }} variants={{ hidden: { opacity: 0, x: 100 }, visible: { opacity: 1, x: 0, transition: { duration: 1, ease: "easeInOut" } } }}>
