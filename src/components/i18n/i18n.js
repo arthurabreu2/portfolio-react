@@ -15,5 +15,13 @@ const resources = {
 i18n
     .use(LanguageDetector)
     .use(initReactI18next)
+    .init({
+        resources,
+        fallbackLng: 'en',
+        debug: process.env.NODE_ENV === 'development',
+        interpolation: {
+            escapeValue: false,
+        },
+    });
 
 export default i18n;
