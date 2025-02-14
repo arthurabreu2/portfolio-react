@@ -1,14 +1,21 @@
+import React, { useState } from "react";
 import logo_av from "../assets/vetor-arthur.svg";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { motion } from "framer-motion";
-import { IoLanguage } from "react-icons/io5";
 import { HiMiniLanguage } from "react-icons/hi2";
+
+import LanguageModalGlass from "./LanguageModal";
 
 
 const Navbar = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
+
     return (
         <motion.nav
             className="mb-10 flex items-center justify-between py-6 bg-transparent"
@@ -79,8 +86,13 @@ const Navbar = () => {
                         visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
                     }}
                 >
-                    <HiMiniLanguage className="shadow-lg transition-all duration-500 hover:scale-125 ml-16" />
+                    <HiMiniLanguage
+                        className="shadow-lg transition-all duration-500 hover:scale-125 cursor-pointer ml-16"
+                        onClick={openModal}
+                    />
                 </motion.div>
+
+                {isModalOpen && <LanguageModalGlass onClose={closeModal} />}
             </motion.div>
         </motion.nav>
     );
