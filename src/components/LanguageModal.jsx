@@ -1,5 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { IoClose } from "react-icons/io5";
+import { useTranslation } from "react-i18next";
+
+
 
 const backdropVariants = {
     hidden: { opacity: 0 },
@@ -7,55 +11,162 @@ const backdropVariants = {
 };
 
 const modalVariants = {
-    hidden: { y: '-100vh', opacity: 0 },
+    hidden: {
+        y: '-5vh',
+        opacity: 0
+    },
     visible: {
         y: 0,
         opacity: 1,
-        transition: { delay: 0.2 },
+        transition: {
+            delay: 0.4,
+            duration: 0.6,
+            ease: 'easeInOut'
+        },
     },
+    exit: {
+        y: '5vh',
+        opacity: 0,
+        transition: {
+            duration: 0.4,
+            ease: 'easeInOut'
+        }
+    }
 };
 
-function LanguageModalGlass() {
+
+
+function LanguageModalGlass({ onClose, onLanguageSelected }) {
+
+    const { i18n, t } = useTranslation();
+
+    const changeToPortuguese = () => {
+        i18n.changeLanguage('pt-BR');
+        onClose();
+
+        setTimeout(() => {
+            onLanguageSelected("Português (Brasil)");
+        }, 350);
+    };
+
+    const changeToEnglish = () => {
+        i18n.changeLanguage('en');
+        onClose();
+        setTimeout(() => {
+            onLanguageSelected("English");
+        }, 350);
+    };
+
+    const changeToSpanish = () => {
+        i18n.changeLanguage('es');
+        onClose();
+        setTimeout(() => {
+            onLanguageSelected("Español");
+        }, 350);
+    };
+
     return (
         <motion.div
             className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
             variants={backdropVariants}
             initial="hidden"
             animate="visible"
+            exit="exit"
         >
             <motion.div
                 className="
-          relative 
-          flex 
-          flex-col 
-          items-center 
-          rounded-2xl 
-          bg-white/10 
-          text-neutral-200 
-          backdrop-blur-sm 
-          shadow-xl 
-          w-80 
-          p-6
-        "
+              relative 
+              flex 
+              flex-col 
+              items-center 
+              rounded-md
+              bg-white/10 
+              text-neutral-200 
+              backdrop-blur-sm 
+              shadow-2xl
+              w-80
+              p-6
+            "
                 variants={modalVariants}
             >
-                <h2 className="text-xl font-semibold mb-4">Selecione seu idioma</h2>
+                <h2 className="text-lg font-medium mb-10 mt-2">
+                    {t("modal.select_language")}
+                    <button
+                        onClick={onClose}
+                        className="absolute top-5 right-4 text-lg hover:text-white transition-all
+                  hover:bg-white/10 text-neutral-200 hover:backdrop-blur-md hover:rounded-sm "
+                    >
+                        <IoClose />
+                    </button>
+                </h2>
 
-                <div className="flex flex-col space-y-2 w-full">
-                    <button className="px-4 py-2 bg-blue-600 text-white rounded shadow-sm hover:bg-blue-700">
+                <div className="flex flex-col items-center space-y-3 w-auto">
+                    <button
+                        onClick={changeToPortuguese}
+                        className="
+                  relative 
+                  w-64
+                  px-4 py-2 
+                  text-lg 
+                  font-extralight 
+                  backdrop-opacity-0 
+                  hover:backdrop-blur-xl 
+                  shadow-lg 
+                  scale-95 hover:scale-100 
+                  delay-75 duration-1000 
+                  hover:rounded-sm 
+                  hover:backdrop-opacity-50 
+                  text-center
+                "
+                    >
+                        <span className="absolute left-3 top-1/2 -translate-y-1/2">🇧🇷</span>
                         Português (Brasil)
                     </button>
-                    <button className="px-4 py-2 bg-blue-600 text-white rounded shadow-sm hover:bg-blue-700">
+
+                    <button
+                        onClick={changeToEnglish}
+                        className="
+                  relative 
+                  w-64
+                  px-4 py-2 
+                  text-lg 
+                  font-extralight 
+                  backdrop-opacity-0 
+                  hover:backdrop-blur-xl 
+                  shadow-lg 
+                  scale-95 hover:scale-100 
+                  delay-75 duration-1000 
+                  hover:rounded-sm 
+                  hover:backdrop-opacity-50 
+                  text-center
+                "
+                    >
+                        <span className="absolute left-3 top-1/2 -translate-y-1/2">🇺🇸</span>
                         English
                     </button>
-                    <button className="px-4 py-2 bg-blue-600 text-white rounded shadow-sm hover:bg-blue-700">
+
+                    <button
+                        onClick={changeToSpanish}
+                        className="
+                  relative 
+                  w-64
+                  px-4 py-2 
+                  text-lg 
+                  font-extralight 
+                  backdrop-opacity-0 
+                  hover:backdrop-blur-xl 
+                  shadow-lg 
+                  scale-95 hover:scale-100 
+                  delay-75 duration-1000 
+                  hover:rounded-sm 
+                  hover:backdrop-opacity-50 
+                  text-center
+                "
+                    >
+                        <span className="absolute left-3 top-1/2 -translate-y-1/2">🇪🇸</span>
                         Español
                     </button>
                 </div>
-
-                <button className="mt-4 px-4 py-2 bg-gray-200 text-black rounded hover:bg-gray-300">
-                    Fechar
-                </button>
             </motion.div>
         </motion.div>
     );
