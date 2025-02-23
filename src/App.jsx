@@ -3,7 +3,6 @@ import Hero from "./components/Hero"
 import About from "./components/About"
 import Technologies from "./components/Technologies"
 import Services from "./components/Services"
-import Experience from "./components/Experience"
 import TimelineMotion from "./components/Timeline/timelineMotion"
 
 const App = () => {

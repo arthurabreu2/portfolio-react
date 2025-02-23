@@ -1,0 +1,22 @@
+{
+    "hero": {
+        "title": "Arthur V. Abreu",
+        "subtitle": "Ingeniero de Software Full-stack Senior",
+        "typed": [
+            "y Curioso",
+            "y Científico",
+            "y DevOps",
+            "y Apasionado por los Desafíos",
+            "y Determinado"
+        ],
+        "content": "¡Hola! 👋\n\nSoy Arthur, tengo un profundo amor por la tecnología, por el progreso y una gran pasión por asumir nuevos desafíos. Me esfuerzo cada día por mejorar en las áreas relacionadas con la tecnología, con el fin de contribuir a un alto nivel para que tu negocio sobresalga en el mercado. Cuenta conmigo para ayudar a tu negocio a crecer, aumentar su visibilidad, integrar las mejores tecnologías y entregar productos de alta calidad, garantizando una experiencia inigualable para tus clientes."
+    },
+    "modal": {
+        "select_language": "Selecciona tu idioma"
+    },
+    "notification": {
+        "title": "¡Ahora estás navegando en {{language}}!",
+        "description": "Disfruta explorando todo el contenido con tu nuevo idioma seleccionado..",
+        "feature_in_dev_description": "Esta función aún está en desarrollo. Estará disponible pronto."
+    }
+}

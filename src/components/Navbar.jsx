@@ -1,14 +1,36 @@
+import React, { useState } from "react";
 import logo_av from "../assets/vetor-arthur.svg";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
-import { FaSquareXTwitter } from "react-icons/fa6";
-import { motion } from "framer-motion";
-import { IoLanguage } from "react-icons/io5";
+import { MdOutlineDashboard } from "react-icons/md";
+import { AnimatePresence, motion } from "framer-motion";
 import { HiMiniLanguage } from "react-icons/hi2";
 
+import LanguageModalGlass from "./LanguageModal";
+import LanguageNotification from "./LanguageNotification";
 
 const Navbar = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
+
+    const [selectedLang, setSelectedLang] = useState("");
+
+    const [showLangNotif, setShowLangNotif] = useState(false);
+
+    const [showFeatureNotif, setShowFeatureNotif] = useState(false);
+
+    const triggerLanguageMessage = (langDisplayName) => {
+        setSelectedLang(langDisplayName);
+        setShowLangNotif(true);
+    };
+
+    const closeLanguageMessage = () => {
+        setShowLangNotif(false);
+    };
+
     return (
         <motion.nav
             className="mb-10 flex items-center justify-between py-6 bg-transparent"
@@ -30,8 +52,13 @@ const Navbar = () => {
                     visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
                 }}
             >
-                <img src={logo_av} alt="Logo Arthur" className="mx-2 h-24 transition-all duration-500 hover:scale-150" />
+                <img
+                    src={logo_av}
+                    alt="Logo Arthur"
+                    className="mx-2 h-24 transition-all duration-500 hover:scale-150"
+                />
             </motion.div>
+
             <motion.div
                 className="m-8 flex justify-center items-center gap-4 text-2xl pr-4"
                 variants={{
@@ -49,6 +76,7 @@ const Navbar = () => {
                 >
                     <FaLinkedin className="shadow-lg transition-all duration-500 hover:scale-125" />
                 </motion.div>
+
                 <motion.div
                     variants={{
                         hidden: { opacity: 0, x: 35 },
@@ -57,6 +85,7 @@ const Navbar = () => {
                 >
                     <FaGithub className="shadow-lg transition-all duration-500 hover:scale-125" />
                 </motion.div>
+
                 <motion.div
                     variants={{
                         hidden: { opacity: 0, x: 35 },
@@ -65,22 +94,81 @@ const Navbar = () => {
                 >
                     <FaInstagram className="shadow-lg transition-all duration-500 hover:scale-125" />
                 </motion.div>
+
+                <motion.div
+                    className="relative group"
+                    variants={{
+                        hidden: { opacity: 0, x: 45 },
+                        visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
+                    }}
+                >
+                    <MdOutlineDashboard
+                        className="shadow-lg transition-all duration-500 hover:scale-125 cursor-pointer"
+                        onClick={() => setShowFeatureNotif(true)}
+                    />
+
+                    <span
+                        className="
+              pointer-events-none
+              absolute
+              bottom-full
+              left-1/2
+              mb-2
+              w-max
+              -translate-x-1/2
+              rounded
+              backdrop-blur-sm
+              bg-white/10
+              px-2
+              py-1
+              text-xs
+              text-white
+              opacity-0
+              scale-0
+              transition-all
+              group-hover:opacity-100
+              group-hover:scale-105
+            "
+                    >
+                        Projects
+                    </span>
+                </motion.div>
+
                 <motion.div
                     variants={{
                         hidden: { opacity: 0, x: 45 },
                         visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
                     }}
                 >
-                    <FaSquareXTwitter className="shadow-lg transition-all duration-500 hover:scale-125" />
+                    <HiMiniLanguage
+                        className="shadow-lg transition-all duration-500 hover:scale-125 cursor-pointer ml-16"
+                        onClick={openModal}
+                    />
                 </motion.div>
-                <motion.div
-                    variants={{
-                        hidden: { opacity: 0, x: 45 },
-                        visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
-                    }}
-                >
-                    <HiMiniLanguage className="shadow-lg transition-all duration-500 hover:scale-125 ml-16" />
-                </motion.div>
+
+                <AnimatePresence>
+                    {isModalOpen && (
+                        <LanguageModalGlass
+                            onClose={closeModal}
+                            onLanguageSelected={triggerLanguageMessage}
+                        />
+                    )}
+
+                    {showLangNotif && (
+                        <LanguageNotification
+                            language={selectedLang}
+                            onClose={closeLanguageMessage}
+                        />
+                    )}
+
+                    {showFeatureNotif && (
+                        <LanguageNotification
+                            onClose={() => setShowFeatureNotif(false)}
+                            titleKey="notification.feature_in_dev_title"
+                            descriptionKey="notification.feature_in_dev_description"
+                        />
+                    )}
+                </AnimatePresence>
             </motion.div>
         </motion.nav>
     );
