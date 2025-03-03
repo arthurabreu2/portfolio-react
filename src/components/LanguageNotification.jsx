@@ -65,10 +65,10 @@ export default function LanguageNotification({
                 animate="visible"
                 exit="exit"
             >
-                <p className="text-lg font-semibold mb-5">
+                <p className="text-lg font-semibold mb-5 drop-shadow-lg">
                     {t(titleKey, language ? { language } : {})}
                 </p>
-                <p className="text-sm font-thin">
+                <p className="text-base font-thin drop-shadow-xl">
                     {t(descriptionKey)}
                 </p>
             </motion.div>

@@ -36,6 +36,7 @@ import {
 } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const fadeVariant = {
     hidden: { opacity: 0, x: -20 },
@@ -68,6 +69,10 @@ const loopAnimation = {
 };
 
 const Technologies = () => {
+
+    const { t } = useTranslation();
+
+
     return (
         <motion.div
             className="border-b border-neutral-800 pb-24"
@@ -76,7 +81,12 @@ const Technologies = () => {
             viewport={{ once: false, amount: 0.2 }}
             variants={containerVariants}
         >
-            <h1 className="my-20 text-center text-3xl drop-shadow-md">Technologies</h1>
+            <motion.h1
+                className="my-20 text-center text-3xl drop-shadow-md"
+                variants={containerVariants}
+            >
+                {t("titles.technologies")}
+            </motion.h1>
 
             <motion.div
                 className="flex flex-wrap items-center justify-center gap-6 py-4"

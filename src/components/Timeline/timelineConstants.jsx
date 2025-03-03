@@ -11,14 +11,14 @@ export const TIMELINE_ITEMS = [
         title: "Python Full-Stack Developer - Ouronova",
         description:
             "Developed dashboards for oil well data analysis using Python, Matplotlib, Pandas, and Plotly. Created advanced simulations with OpenCFS and integrated SOAP APIs for regulatory document submission. Focused on authentication systems, database optimization, and engineering simulations.",
-        tags: ["#Python", "#Django", "#PyTest", "#Docker", "#AWS"],
+        tags: ["#Python", "#Django", "React", "#PyTest", "#Docker", "#AWS"],
     },
     {
         date: "Nov 2022",
         title: "Backend Developer - MINEHR | People Analytics",
         description:
             "Built interactive dashboards for people analytics, optimized API responses, and led SSO integration with Okta and SAML. Improved login systems and conducted endpoint testing with PyTest, reducing API response times by up to 70%.",
-        tags: ["#Python", "#Django", "#PyTest", "#Azure", "#Docker"],
+        tags: ["#Python", "#Django", "React", "#PyTest", "#AWS", "#Docker"],
     },
     {
         date: "Jun 2022",
