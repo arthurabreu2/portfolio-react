@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
-import { ABOUT_TEXT } from "../constants";
 import { useTranslation } from "react-i18next";
 
 const About = () => {
-    const { i18n, t } = useTranslation();
+    const { t } = useTranslation();
 
     return (
         <div className="border-b border-neutral-900 pb-28">

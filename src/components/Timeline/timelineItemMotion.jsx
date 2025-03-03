@@ -26,11 +26,9 @@ export default function TimelineItemMotion({ item, isLeftSide }) {
             whileInView="show"
             viewport={{ once: false, amount: 0.2 }}
         >
-            {/* ====== BLOCO DESKTOP (MD+) ====== */}
             <div className="hidden md:block">
                 {isLeftSide ? (
                     <div className="absolute top-1/2 -translate-y-1/2 flex items-center right-1/2">
-                        {/* Círculo e data (lado esquerdo) */}
                         <div className="relative z-10 flex h-24 w-24 items-center justify-center rounded-full border border-neutral-700 bg-white/10 text-neutral-200 backdrop-blur-sm shadow-xl">
                             <div className="absolute inset-0 rounded-full ring-2 ring-neutral-700" />
                             <span className="z-10 text-sm">{item.date}</span>
@@ -46,7 +44,6 @@ export default function TimelineItemMotion({ item, isLeftSide }) {
                             className="border-t-2 border-neutral-700 mr-3"
                             variants={lineGrow}
                         />
-                        {/* Círculo e data (lado direito) */}
                         <div className="relative z-10 flex h-24 w-24 items-center justify-center rounded-full border border-neutral-700 bg-white/10 text-neutral-200 backdrop-blur-sm shadow-xl">
                             <div className="absolute inset-0 rounded-full ring-2 ring-neutral-700" />
                             <span className="z-10 text-sm">{item.date}</span>
@@ -55,7 +52,6 @@ export default function TimelineItemMotion({ item, isLeftSide }) {
                 )}
             </div>
 
-            {/* ====== BLOCO MOBILE (MD-) ====== */}
             <div className="md:hidden flex items-center justify-center mb-4">
                 <div
                     className="
@@ -77,7 +73,6 @@ export default function TimelineItemMotion({ item, isLeftSide }) {
                 </div>
             </div>
 
-            {/* ====== CARTÃO DO TIMELINE ====== */}
             <div
                 className={`
           w-full md:w-[49%] rounded-md border border-neutral-700 bg-white/10 p-6 backdrop-blur-sm shadow-xl

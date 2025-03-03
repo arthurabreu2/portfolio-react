@@ -158,7 +158,6 @@ const Navbar = () => {
                 )}
             </AnimatePresence>
 
-            {/* Ícone de idioma fixo, com tooltip */}
             <motion.div
                 className="
           fixed bottom-10 right-10
