@@ -42,8 +42,8 @@ function LanguageModalGlass({ onClose, onLanguageSelected }) {
 
     const changeToPortuguese = () => {
         i18n.changeLanguage('pt-BR');
+        localStorage.setItem('appLanguage', 'pt-BR');
         onClose();
-
         setTimeout(() => {
             onLanguageSelected("Português (Brasil)");
         }, 350);
@@ -51,6 +51,7 @@ function LanguageModalGlass({ onClose, onLanguageSelected }) {
 
     const changeToEnglish = () => {
         i18n.changeLanguage('en');
+        localStorage.setItem('appLanguage', 'en');
         onClose();
         setTimeout(() => {
             onLanguageSelected("English");
@@ -59,6 +60,7 @@ function LanguageModalGlass({ onClose, onLanguageSelected }) {
 
     const changeToSpanish = () => {
         i18n.changeLanguage('es');
+        localStorage.setItem('appLanguage', 'es');
         onClose();
         setTimeout(() => {
             onLanguageSelected("Español");

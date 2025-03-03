@@ -19,5 +19,128 @@
         "description": "Enjoy exploring all the content in your newly selected language..",
         "feature_in_dev_title": "Ohhh, this is gonna be awesome!",
         "feature_in_dev_description": "This feature is still under development. It will be available soon."
+    },
+    "about_me": {
+        "about": "About ",
+        "me": "me",
+        "text_about": "From clothing salesman to software developer. That was the transformation that changed my life. In 2017, I knew I wanted something bigger, something that would challenge my mind and push me beyond what I thought was possible. With no prior experience in technology but a burning desire to change my life, I dove headfirst into the unknown. Coming from a family with a background in IT, I received a piece of advice that resonated deeply: ''Learn to code.'' With determination, I invested in a programming logic course with Python. And it was love at first sight. Just one month later, I was already facing my first real challenge: developing a hydrogeological graph generator system. That was the moment I realized I had found my path. Since then, I haven’t stopped. I specialized in backend development with Python and Django, robust APIs, and advanced data modeling and management. I deepened my knowledge in React, advanced styling, authentication, RPA automation, and even artificial intelligence. For me, technology is not just about code—it’s about solving problems intelligently and making a real impact."
+    },
+    "tooltips": {
+        "projects": "Projects",
+        "translate": "Translate"
+    },
+    "titles": {
+        "technologies": "Technologies"
+    },
+    "services": {
+        "title": "Services",
+        "backend_title": "Back-end development",
+        "backend_service": "Design scalable, secure, and innovative systems tailored to streamline processes and drive efficiency, delivering a solid foundation for future growth in a dynamic digital landscape.",
+        "frontend_title": "Front-end development",
+        "frontend_service": "Craft intuitive, responsive, and visually engaging interfaces that enhance user experiences and bring digital products to life, ensuring seamless interaction in a fast-evolving digital world.",
+        "data_title": "Data Modeling and Management",
+        "data_service": "Design efficient data models and manage large-scale datasets, ensuring optimized performance, accuracy, and scalability to support data-driven decision-making and advanced analytics.",
+        "architeture_title": "Architecture",
+        "architeture_service": "Robust and adaptive system architectures, focusing on reliability, performance, and aligning technology with strategic business needs.",
+        "devops_title": "DevOps",
+        "devops_service": "Optimize workflows by implementing seamless automation, CI/CD pipelines, and infrastructure as code, ensuring efficiency and operational excellence.",
+        "cloud_title": "Cloud Computing",
+        "cloud_service": "Deliver flexible and secure cloud solutions, enabling cost-effective operations, enhanced performance, and easy adaptability to business growth.",
+        "automation_title": "Automation & AI",
+        "automation_service": "Intelligent automation solutions and AI-driven systems that streamline processes, reduce manual effort, and enable data-informed decision-making for innovative business outcomes.",
+        "everything_title": "Everything for Your Business",
+        "everything_service": "Solutions crafted specifically for your business needs. From strategy to execution, I ensure every solution aligns perfectly with your goals and drives measurable results.",
+        "work_together_title": "Let's Work Together!",
+        "work_together_service": "Ready to bring your ideas to life? Contact me today and let's create something extraordinary."
+    },
+    "experience": {
+        "title": "Experience",
+        "items": [
+            {
+                "date": "Sep 2024",
+                "title": "Senior Software Developer | RPA & AI - Thoughtful AI",
+                "description": "Design, develop, and implement automated solutions to enhance operational efficiency, reduce manual errors, and support AI-driven decision-making across various systems. Lead the development of machine learning models and AI-based solutions tailored to specific business processes, improving the accuracy and scalability of operations. Collaborate on backend development projects, leveraging frameworks like Django, and integrating APIs to create efficient user experiences. Develop, maintain, and optimize robust, secure APIs. Implement test automation strategies to ensure software reliability and best practices. Manage continuous integration and deployment (CI/CD) pipelines using Bitbucket, integrating automated testing and deployment to AWS services (Lambda, EC2) for scalable serverless architectures. Work closely with cross-functional teams to design and deploy custom software solutions that meet business requirements. Utilize RPA (Robotic Process Automation) tools to automate repetitive tasks, enhance workflow efficiency, and integrate AI-powered automation into business processes.",
+                "tags": [
+                    "#Python",
+                    "#Django",
+                    "#PyTest",
+                    "#Selenium",
+                    "Pytorch",
+                    "TensorFlow"
+                ]
+            },
+            {
+                "date": "Aug 2023",
+                "title": "Python Full-Stack Developer - Ouronova",
+                "description": "Development of interactive user interfaces using JS and React, along with frameworks in Python. Implementation of user interface designs and user experience (UI/UX). Building and maintaining data analysis dashboards focused on oil well interpretation with Matplotlib, pandas, numpy, and Plotly. Creation of advanced user authentication and authorization features via Custom User Models. Development and maintenance of servers and APIs handling advanced engineering simulations for oil wells. Implementation of endpoint testing with PyTest. Application performance optimizations, reducing response times and enhancing scalability. Database schema design and query optimization. Collaboration under SCRUM methodology with the technology and engineering team. Integration of openCFS (Coupled Field Simulation) for multiphysics modeling, custom Python integration, an API for front-end communication, automated parameterization, XML manipulation, and result linking using the Paraview API. Creation of a SOAP API to send documents to the Brazilian National Petroleum Agency (ANP) using WSDL services (zeep, DRF, BytesIO).",
+                "tags": [
+                    "#Python",
+                    "#Django",
+                    "#PyTest",
+                    "#Docker",
+                    "#AWS"
+                ]
+            },
+            {
+                "date": "Nov 2022",
+                "title": "Backend Developer - MINEHR | People Analytics",
+                "description": "Backend development for People Analytics (HR Data) using Python. Creation of interactive dashboards for people analytics with high data consumption. Query and API response optimizations, reducing return times by 60-70%. SSO integration (Okta and SAML). Improvements to login systems and custom endpoints for password resets. Communication between frontend and backend to generate interactive charts with Django and Pandas. Led development efforts and assisted junior developers. Frequent alignment meetings with clients in Portuguese and English. Implemented endpoint testing with PyTest.",
+                "tags": [
+                    "#Python",
+                    "#Django",
+                    "#PyTest",
+                    "#Azure",
+                    "#Docker"
+                ]
+            },
+            {
+                "date": "Jun 2022",
+                "title": "Software Developer - Seal Tecnologia",
+                "description": "Developed solutions for a web-based fuel station automation system, improving operational efficiency. Built responsive websites using JavaScript, React, and TailwindCSS. Implemented secure authentication and password recovery. Optimized reporting systems and maintained APIs with Python and NodeJS.",
+                "tags": [
+                    "#Python",
+                    "#Django",
+                    "#React",
+                    "#JavaScript",
+                    "#Docker"
+                ]
+            },
+            {
+                "date": "Dec 2021",
+                "title": "Python Full-Stack Developer - Agristamp",
+                "description": "Provided support for an agricultural insurance simulation system, improving system reliability. Developed and maintained front-end and back-end applications using React, JavaScript, and Django. Enhanced API performance and functionality with FastAPI. Designed new features and optimized simulations. Implemented improvements across multiple modules.",
+                "tags": [
+                    "#Python",
+                    "#Django",
+                    "#React",
+                    "#JavaScript",
+                    "#FastAPI"
+                ]
+            },
+            {
+                "date": "Sep 2021",
+                "title": "Software Developer - MDR Engenharia e Tec.",
+                "description": "Developed web applications with Django (SQLite) using HTML, CSS, JavaScript, and Bootstrap. Created and optimized code routines in C#, PHP, and Python, improving system performance. Built secure APIs for private data management with token-based authentication. Implemented web interfaces with secure login systems in PHP. Developed a digital command system integrating Python, Django, JavaScript, React, and jQuery.",
+                "tags": [
+                    "#Python",
+                    "#Django",
+                    "#HTML",
+                    "#CSS",
+                    "#JavaScript"
+                ]
+            },
+            {
+                "date": "Mar 2018",
+                "title": "Python Developer - Civil Engineering",
+                "description": "Collaborated with a Ph.D. engineer to develop a hydrogeological chart generator website using Numpy, Pandas, Matplotlib, and Flopy. Organized and optimized functions/classes, resolving chart-generation issues. Created intuitive web interfaces for presenting analytical data and performed advanced engineering calculations, enabling precise analysis for professionals.",
+                "tags": [
+                    "#Python",
+                    "#Numpy",
+                    "#Pandas",
+                    "#Matplotlib",
+                    "#Flopy"
+                ]
+            }
+        ]
     }
 }
