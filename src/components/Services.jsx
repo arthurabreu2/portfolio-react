@@ -42,7 +42,7 @@ const cardVariants = {
 export default function Services() {
     const { t, i18n } = useTranslation();
 
-    const heightClass = i18n.language === "pt-BR" ? "h-[300px]" : "h-[280px]";
+    const heightClass = ["pt-BR", "es"].includes(i18n.language) ? "h-[300px]" : "h-[280px]";
 
     const servicesData = [
         {
